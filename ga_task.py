@@ -80,6 +80,20 @@ print(divider)
 # Suppose we are at that same company and ​REVENUE = -x^2 + 5x +7​.
 # What value of ​x maximizes revenue?
 
+# ^ XOR (eXclusive OR) returns 1 if one operand is 0 and another is 1. Otherwise, it returns 0.
+# so, the higher the value of x the higher the REVENUE value will be.
+
+import itertools
+for x in itertools.count():
+  prev_revenue = 0
+  revenue = (-x ^ 2) + (5 * x) +7
+  if(revenue > prev_revenue):
+    print(revenue)
+    prev_revenue = revenue
+
+# but if ^ is refering to ** ( to the power of ), follows my solution.
+
 x = 2.5
 revenue = (-x**2) + (5*x) + 7
 print(revenue)
+
